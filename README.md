@@ -32,3 +32,34 @@ The integration creates the binary sensor `binary_sensor.hong_kong_public_holida
 | Attribute      | Description                                        |
 |----------------|----------------------------------------------------|
 | `holiday_name` | Name of today's holiday (present when `on`)        |
+
+## Usage
+
+The sensor behaves like any other binary sensor and can be used in automations, scripts and templates.
+
+Example: turn off the TV at 23:00, but only on public holidays:
+
+```yaml
+automation:
+  - alias: "Turn off TV at 23:00 on public holidays"
+    triggers:
+      - trigger: time
+        at: "23:00:00"
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.hong_kong_public_holiday
+        state: "on"
+    actions:
+      - action: remote.turn_off
+        target:
+          entity_id: remote.living_room_tv
+```
+
+The name of today's holiday is available as an attribute, for example in notifications:
+
+```jinja
+{{ state_attr('binary_sensor.hong_kong_public_holiday', 'holiday_name') }}
+```
+
+Note: the sensor switches at midnight Hong Kong time, which may differ from the local time of your Home Assistant instance.
+
