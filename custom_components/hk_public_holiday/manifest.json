@@ -6,5 +6,5 @@
   "documentation": "https://github.com/steven-chau/hk-public-holidays-for-HA",
   "issue_tracker": "https://github.com/steven-chau/hk-public-holidays-for-HA/issues",
   "iot_class": "cloud_polling",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
