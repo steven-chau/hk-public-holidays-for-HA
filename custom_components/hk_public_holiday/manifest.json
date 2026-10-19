@@ -1,7 +1,9 @@
 {
   "domain": "hk_public_holiday",
   "name": "Hong Kong Public Holiday",
+  "codeowners": ["@steven-chau"],
   "config_flow": true,
+  "documentation": "https://github.com/steven-chau/hk-public-holidays-for-HA",
   "iot_class": "cloud_polling",
   "version": "0.1.0"
 }
