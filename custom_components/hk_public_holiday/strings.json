@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Hong Kong Public Holiday",
+        "description": "This integration adds a binary sensor that is on during public holidays in Hong Kong. It requires no configuration."
+      }
+    },
+    "abort": {
+      "already_configured": "Hong Kong Public Holiday is already configured."
+    }
+  }
+}
